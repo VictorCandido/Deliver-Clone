@@ -5,6 +5,7 @@ import { useNavigation } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import categories from '../../assets/data/filter.json';
 interface Category {
     name: string;
     count: number;
@@ -44,64 +45,6 @@ const ItemBox = () => (
 
 const Filter = () => {
     const navigation = useNavigation();
-
-    const categories = [
-        {
-            name: 'Acai',
-            count: 7
-        },{
-            name: 'African',
-            count: 9
-        },{
-            name: 'Alcohool',
-            count: 330
-        },{
-            name: 'American',
-            count: 201
-        },{
-            name: 'BBQ',
-            count: 73
-        },{
-            name: 'Brunch',
-            count: 7
-        },{
-            name: 'Cakes',
-            count: 7
-        },{
-            name: 'Dessert',
-            count: 7
-        },{
-            name: 'Falafel',
-            count: 7
-        },{
-            name: 'German',
-            count: 7
-        },{
-            name: 'Healthy',
-            count: 7
-        },{
-            name: 'Indian',
-            count: 7
-        },{
-            name: 'Meal Deal',
-            count: 7
-        },{
-            name: 'Pancakes',
-            count: 7
-        },{
-            name: 'Pizza',
-            count: 7
-        },{
-            name: 'Soup',
-            count: 7
-        },{
-            name: 'Takeaways',
-            count: 7
-        },{
-            name: 'Wraps',
-            count: 7
-        },
-    ]
 
     const [items, setItems] = useState<Category[]>(categories);
     const [selected, setSelected] = useState<Category[]>([]);

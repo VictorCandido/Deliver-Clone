@@ -36,7 +36,7 @@ const CustomHeader = () => {
 
             <View style={styles.container}>
                 <TouchableOpacity onPress={openModal}>
-                    <Image style={styles.bike} source={require('../assets/images/bike.jpg')}/>
+                    <Image style={styles.bike} source={require('../assets/images/bike.png')}/>
                 </TouchableOpacity>
                 
                 <TouchableOpacity style={styles.titleContainer} onPress={openModal}>
